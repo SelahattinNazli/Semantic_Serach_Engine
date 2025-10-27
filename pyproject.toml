@@ -1,0 +1,44 @@
+[project]
+name = "semantic-search-engine-free"
+version = "0.1.0"
+description = "Professional semantic search engine for PDF documents using local AI models"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.2.2",
+    "langchain>=1.0.2",
+    "langchain-chroma>=1.0.0",
+    "langchain-community>=0.4",
+    "langchain-core>=1.0.0",
+    "langchain-ollama>=1.0.0",
+    "pypdf>=6.1.3",
+    "sentence-transformers>=5.1.2",
+    "streamlit>=1.50.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--cov=src",
+    "--cov-report=html",
+    "--cov-report=term-missing",
+]

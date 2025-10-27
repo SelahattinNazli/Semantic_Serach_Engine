@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# UV
+.uv/
+
+# ChromaDB (will be created at runtime)
+chroma/db/*
+
+# Tests
+tests/
+*.pytest_cache
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Temporary files
+temp_*
+*.tmp
+
+# Documentation
+README.md
+docs/
+
+# CI/CD
+.github/
+
+echo ".history/" >> .dockerignore

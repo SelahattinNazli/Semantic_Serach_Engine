@@ -1,0 +1,22 @@
+[project]
+name = "semantic-search-engine-free"
+version = "0.1.0"
+description = "Professional semantic search engine for PDF documents using local AI models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.2.2",
+    "langchain>=1.0.2",
+    "langchain-chroma>=1.0.0",
+    "langchain-community>=0.4",
+    "langchain-core>=1.0.0",
+    "langchain-ollama>=1.0.0",
+    "pypdf>=6.1.3",
+    "sentence-transformers>=5.1.2",
+    "streamlit>=1.50.0",
+    "numpy>=1.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
